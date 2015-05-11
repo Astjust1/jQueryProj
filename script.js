@@ -5,7 +5,7 @@ $(document).ready(function(){
 				
 		var id = i+1;
 		
-		$("<div id='grid-"+id+"'>row1 "+id+"</div").insertAfter( "#grid-"+i );
+		$("<div id='grid-"+id+"'>row1 "+id+"</div>").insertAfter( "#grid-"+i );
 	}
 
 });
