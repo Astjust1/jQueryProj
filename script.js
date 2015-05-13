@@ -1,7 +1,13 @@
 /// <reference path="typings/jquery/jquery.d.ts"/>
 $(document).ready(function(){
 
-	grid(16,16);
+	grid(16,16),
+		
+	$("td").hover(function(){
+	$(this).css("background-color", "red");
+});
+
+
 
 });
 
@@ -15,11 +21,8 @@ function grid(num1,num2){
 
 			for(var column = 0; column < num2; ++column){
 				row.appendChild(document.createElement("td"));
-			}			
-		}
-}
+			};		
+		};
+};
 
 
-$("td").hover(function(){
-	$(this).css("color", "red")
-});
