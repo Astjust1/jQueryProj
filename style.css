@@ -1,0 +1,11 @@
+#grid td {
+	border:1px solid #444;
+	width:30px;
+	height:30px;
+}
+
+/*#grid td:hover{
+	cursor:auto;
+	background-color:#f00;
+}
+*/

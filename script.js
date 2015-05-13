@@ -1,16 +1,25 @@
 /// <reference path="typings/jquery/jquery.d.ts"/>
 $(document).ready(function(){
 
-	for(var i = 0; i< 16;++i){	
-		var id = i+1;
-		$("<div id='row-"+id+"'>row "+id+"</div>").insertAfter( "#row-"+i );
-		$("<div id=column-0>column0</div>").insertAfter("#row-"+i);
-		
-	}
-	
-	for(var j = 0; j < 16;++j){
-		var id2 = j+1;
-		$("<div id='column-"+id2+"'>column"+id2+"</div>").insertAfter("column-"+j);
-	}
+	grid(16,16);
 
+});
+
+function grid(num1,num2){
+
+	var start = document.getElementById("grid");
+
+
+		for(var r = 0; r < num1; ++r){
+			var row = start.appendChild(document.createElement("tr"));
+
+			for(var column = 0; column < num2; ++column){
+				row.appendChild(document.createElement("td"));
+			}			
+		}
+}
+
+
+$("td").hover(function(){
+	$(this).css("color", "red")
 });
